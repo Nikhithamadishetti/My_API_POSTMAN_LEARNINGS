@@ -1,0 +1,41 @@
+#day-5 #restAPI
+
+pre-request Scripts
+========================
+FLOW OF API VALIDATIONS 
+--------------------------------
+pre-request script -> request -> response -> Test Scripts
+
+Collection 
+Folder
+Request 
+
+pre-request scripts are generally used to get rid of hard corded data
+
+Variables:
+------------
+what? -> contains Data
+whay? -> to avoid rework, redundancy/duplication and reuse
+where? -> scope -> 
+
+5 levels of variables
+---------------------------
+Global - accessible in workspace
+collection - accessible within collection
+environmnet - accessible in workspace, but need to switch to particular environmnet
+
+Local-accessible within Request levels, defined in pre-request tab
+
+Syntax: pm.variables.set("url_local","https://reqres.in);
+
+we can unset global, collection and env variables in Tests script
+
+Syntax: pm.globals.unset("url_global")
+
+how to get variables data in console
+syta: console.log(pm.globals.get("url_global"))
+
+
+set-local,global,collection,environmnet variables
+unset-local,global,collection,environmnet variables
+get-local,global,collection,environmnet variables

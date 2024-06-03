@@ -1,0 +1,64 @@
+#day8 #restAPI
+
+Authentication TYPES:
+=========================
+
+Authentication depends on how API's are designed 
+
+1.No Auth -> no Authentication req and Acess API Directly
+
+2.API Key -> we require API key to acees to some API's
+
+3.Bearer Token-> we need to generate token 
+
+4.Basic Auth-> we req username and pwd (not in encrypted format)
+
+5.Digest Auth-> we req username and pwd ( Encrypted format)
+
+Below two are Most secured Third-party Authentications:
+-----------------------------------------------
+6.OAuth 1.0 
+
+7.OAuth 2.0 -> next version of OAuth1.0
+
+Repositaory github access -> personal access Token
+User specific Access -> Oauth token
+
+Uploading Files via API
+=========================
+Step-1:
+we have jar file which needs to run below cmd in cmd prompt
+
+java -jar file-upload-RestAPI.jar
+
+This is developed using sprint boot application
+
+Step-2:
+Now u can use below urls for uploading file
+Single file Uploading- https://localhost:8080/uploadFile
+Multiple files upload- https://localhost:8080/uploadMultipleFiles
+
+Step-3:
+Create a POST Request and under Body select 
+Body -> form-data -> select file/files from dropdown.
+
+cUrl and Swagger
+================
+Swagger -> interactive document (in coument we can able to do somekind of testing 
+                                 that interacts with server)
+								 
+								 
+Main difference btw Swagger and Postman
+==========================================
+swagger is used for exploring API's
+Swagger we cannot perfirm any validations
+swagger cannot generate reports
+Swagger we cannot perform API Chaining
+
+
+cURL-> (Client URL )consolidated String which contains all the information of particular API.
+
+Purpose and Use?
+From Curl by default request is genrared and bydefault it creates Authenctication,headers,body etc..
+
+postman -> import-> raw text -> past curl and send 

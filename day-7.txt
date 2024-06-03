@@ -1,0 +1,33 @@
+#day-07 #restAPI 
+
+API DATA DRIVEN TESTING
+==========================
+What is DDT
+using data from external files is called DDT 
+
+resource used :
+
+Books API
+-------------
+if u want to get data from external sources to run the collection follow below step 
+
+
+Link Request with file using attributes which u like to pass from file in {{""}} 
+so that data will be identified using those key arrtibutes 
+
+Step-1:
+
+Prep data either JSON or CSV format 
+
+Step-2
+
+Import the file at Run time
+
+Step-3
+
+Before runing check the preview should not be corrupted
+
+Step-4
+Excute collection
+
+

@@ -1,0 +1,73 @@
+#Day-3 #restApi
+
+How To Create Own API's | JSON (Java Script Object Notation)
+================================================
+
+Pre-requisites
+----------------
+Step-1 : Install NodeJS
+when we install NodeJS by default we get "npm" 
+Step-2: Then Install Json server
+By using npm we have to install Json server
+
+After installing nodejs and json-server
+----------------------------------------
+Step-1 : check node and nodemodules are present in env path
+Step-2: check versions of nodejs and npm installed by using below cmds in cmd prompt
+
+node --version
+npm --version
+
+Step-3 : then run cmd to install json server
+npm install -g json-server
+
+Step-4: get sample json data from below website 
+https://www.includehelp.com/json/json-sample-data-files.aspx
+
+Step-5: run json file in server using below cmd
+json-server employees.json
+
+should see json server started in local machine..
+
+API CREATED -> http://localhost:3000/Employees
+
+Use Above created API and verify Response using HTTP Requested Methods
+
+*GET Single User: http://localhost:3000/Employees/1
+*GET Employees List: http://localhost:3000/Employees
+*POST Add Employee to List:http://localhost:3000/Employees
+inside body:
+{
+    "id": "EMP04",
+        "jobTitle": "Test Engineer",
+        "firstName": "Nikhitha",
+        "lastName": "Madishetti",
+        "fullName": "Nikhitha Madishetti",
+        "address": "xyz, India",
+        "contact": "+91-9999999999",
+        "email": "xyz.abc@gmail.com"
+}
+*PUT Update Employee user : http://localhost:3000/Employees/1
+inside body
+{
+    "id": "4",
+        "jobTitle": "Software Test Engineer",
+        "firstName": "Nikhitha",
+        "lastName": "Madishetti",
+        "fullName": "Nikhitha Madishetti",
+        "address": "xyz, India",
+        "contact": "+91-9999999999",
+        "email": "xyz.abc@gmail.com"
+}
+*DELTE: Employee from List : http://localhost:3000/Employees/1
+
+
+Advantages of JSON (Java Script Object Notation)?
+1. Lightweight Data
+2. can be encrypted/Decrepted
+3. easy to Understand than XML
+
+How to get Json Path from Large sets of Json files?
+
+json path finder-https://jsonpathfinder.com/
+json oath evaluator-https://jsonpath.com/

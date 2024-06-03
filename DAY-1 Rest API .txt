@@ -1,0 +1,89 @@
+#Day-1 #API Testing 
+
+
+
+API : Application Programming Interface
+
+
+
+API Testing Introduction:
+
+--------------------------
+
+API -> Backend Testing
+
+Web Testing -> FrontEnd Testing
+
+
+
+Client & Server
+
+Client: its a System or Source from where we are able to access Server
+
+Server: its a System or Source from where we get access to service in the form of response
+
+
+
+Client server Architecture:
+
+==============================
+
+
+
+WEB APPLICATIONS follow 3-tier Architecture
+
+
+
+1-tier Architecture: maintaining both client and File server in single machine ex: NOTEPAD,PDF's etc..
+
+2-tier Architecture: maintaining both client and own internal servers in two different machines ex: Banks
+
+3-tier Architecture: Having business logic tier btw client and server machine ex: google web application
+
+
+
+Purpose of Business logic tier (Application server):
+
+--------------------------------
+
+Comunicates btw Application layer and Database Layer help of API requests.
+
+
+
+Presentation Layer (FrontEnd)-> Application Layer ->Data Layer(BackEnd)
+
+TYPES OF API's
+=====================
+-SOAP (old) -supports only XML data (Lengthy and complex sometimes)
+-REST API (Latest) -supports xml, json, html,txt etc..
+
+Webservices:
+=====================
+if API availiable on web then it is called Web Service
+Api's cannot be webservice unless hosted on internet(Availiable to Public)
+so All webSerives are Api's but not all Api's are webservices
+
+REST API METHODS or HTTP Request METHODS
+==========================================
+GET - get response from server
+POST - sending data to store in server
+PUT - updating data in server
+DELETE - deleting data in server
+
+URL/URI VS URN
+======================
+URL: https://google.com/article/articalname
+
+Terminologies
+=========================
+https-> protocal
+//google.com -> Domain
+/article/articalname -> resource name or query parameter or path or URN or endpoint
+
+Note: domain can change but endpoints will not change we can endpoints are provided by developers
+
+payload
+====================
+Request payload -> Data sending through request
+Response payload -> Data cmg through response
+

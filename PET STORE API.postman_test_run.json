@@ -1,0 +1,146 @@
+{
+	"id": "b41c82bc-33d4-4fef-b53a-396e49606a9c",
+	"name": "PET STORE API",
+	"timestamp": "2024-06-01T12:08:26.886Z",
+	"collection_id": "16847351-4ec17d0b-23cc-4b00-9f84-b05bb4d2bc6d",
+	"folder_id": 0,
+	"environment_id": "16847351-9e45d9d1-c1d6-418b-9bf8-d61ae7ab6ad3",
+	"totalPass": 4,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-06-01T12:08:22.962Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "7bdcaa94-7eff-4cf7-9c3b-a6b296d06561",
+			"name": "create user",
+			"url": "https://petstore.swagger.io/v2/user",
+			"time": 1466,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1466
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "0ab08cce-4f57-47f2-826f-8e7d159de5e4",
+			"name": "Retrive User by name",
+			"url": "https://petstore.swagger.io/v2/user/nikikbhlp0m",
+			"time": 333,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				333
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "11567554-ff27-4f4c-8b4a-6602ecc8467f",
+			"name": "Retrive User by name Copy",
+			"url": "https://petstore.swagger.io/v2/user/nikikbhlp0m",
+			"time": 322,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				322
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "c2127a4b-63e5-4d79-9028-2246ba939407",
+			"name": "Retrive User by name Copy 2",
+			"url": "https://petstore.swagger.io/v2/user/nikikbhlp0m",
+			"time": 266,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				266
+			],
+			"allTests": [
+				{
+					"Status code is 201": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2387,
+	"collection": {
+		"requests": [
+			{
+				"id": "7bdcaa94-7eff-4cf7-9c3b-a6b296d06561",
+				"method": "POST"
+			},
+			{
+				"id": "0ab08cce-4f57-47f2-826f-8e7d159de5e4",
+				"method": "GET"
+			},
+			{
+				"id": "11567554-ff27-4f4c-8b4a-6602ecc8467f",
+				"method": "PUT"
+			},
+			{
+				"id": "c2127a4b-63e5-4d79-9028-2246ba939407",
+				"method": "DELETE"
+			}
+		]
+	}
+}

@@ -1,0 +1,11 @@
+#day-11 #restAPI
+
+https://myopencart.example.com/index.php?route=api/login
+https://myopencart.example.com/index.php?route=api/shipping/address
+https://myopencart.example.com/index.php?route=api/currency
+https://myopencart.example.com/index.php?route=api/cart/add
+
+baseUrl - https://myopencart.example.com/index.php?route=
+
+https://myopencart.example.com/index.php?route=
+{{baseUrl}}api/login

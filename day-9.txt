@@ -1,0 +1,27 @@
+#day-9 #restAPI
+
+ecommerce APP API's (MINI API PROJECT)
+==========================================
+resource used -https://petstore.swagger.io/
+
+USING JSON MODEL
+==================================
+
+Step-1:
+Swagger -> Exploring API Requests
+Step-2
+use API's from swagger and do necessary changes
+Step-3
+Create Document once done everything
+Step-4
+Publish it 
+published petstore documentation in JSON MODEL:
+https://documenter.getpostman.com/view/16847351/2sA3Qwb9v1
+
+Note:
+Before Testing we use Swagger
+After testing we use POSTMAN
+we can also import published document into POSTMAN easily
+
+
+

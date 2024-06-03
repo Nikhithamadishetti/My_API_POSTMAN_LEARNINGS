@@ -1,0 +1,16 @@
+Installed openCart E-Commerce Web Application in Local 
+=======================================================
+OPEN SOURCE Web APP URL -https://www.opencart.com/
+
+Apache  - Run Web Application
+MySQL - Database 
+
+Instead of above installing above tools and integrate just 
+Install XAMPP version 7.4.29
+
+using below urls i can host openCart web application in my local
+http://localhost/opencart/upload/  
+http://localhost/opencart/upload/admin
+https://docs.opencart.com/en-gb/system/users/api/
+
+cmd to get ip -ipconfig

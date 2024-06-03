@@ -1,0 +1,50 @@
+#Day -2
+
+POSTMAN - API Testing tool
+
+Now-a-days Developers use POSTMAN for preparing API Documentation
+
+We can Access postman using Desktop and Web both having same options and shared content and collections 
+
+Workspace -> create/rename/delete
+======================================
+what is Workspace?: it used to maintain files/requestes/collections and saved automatically
+
+workspace -> n no of collections
+collection -> n no of folders
+folder -> n no of requestes
+
+Collection-> create/rename/delete/import and run the collection
+================================================
+contains n no of sub folders or http requests
+
+Request ------> API -------> Response
+
+Performing CRUD Opertaions using HTTP Requests Methods
+======================================================
+POST -- CREATE the resource/data on Database
+GET --- Retrieve the resource/data from Database
+PUT ----UPDATE the resource/data on Database
+Delete -Delete the resource/data from Database
+Patch --- updating partial details on Database
+
+https://reqres.in/api/users?page=2
+portocol//domain/path_parameters/query_parameters
+
+validations
+===================
+status code
+time
+data size
+response body(json /xml)
+cookies
+headers
+
+Status codes
+==============
+200  successful codes 
+400  client errors
+500  server side errors
+
+
+

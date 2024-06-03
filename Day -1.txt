@@ -1,0 +1,109 @@
+
+Day-1 :
+
+RestAssured is an API/Library through which we can automate Rest API
+
+pre-requisites:
+1.Java + Eclipse
+2.TestNG
+3.Maven
+
+Required dependencies: 
+
+1.rest-assured
+2.json-path
+3.json
+4.gson
+5.TestNG
+6.scribejava-apis (generates random data)
+7.json-schema-validator
+8.xml-schema-validator
+9.xml-path
+10.java-hamcrest
+11.hamcrest-core
+12.hamcrest-library
+
+Can Download anytype of dependencies from below site
+https://mvnrepository.com/
+
+http Requests: 
+1.GET
+2.POST
+3.PUT
+4.DELETE
+
+Note: By default RestAssured will support BDD Approch no need to install Cucumber pulgin 
+
+Cucumber support Gherkin Language
+----------------------------------------
+Given() method -> (contains only pre-requisites)
+--> Content type,set Cookies, add auth, add parameters, set headers info etc..
+when() method - (contains only requests)
+--> Request Type : GET , POST , PUT, DELETE
+Then() method - (contains only response validations)
+--> Validations : Status code, extract response, extract response body, extract header cookies and response body, etc..
+
+sometime if there are multiple validations then it will be part of then()
+
+for usage of above methods import below Static packages in every class
+-------------------------------------------------
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+
+Reference Documentation:
+https://reqres.in/
+
+GET
+https://reqres.in/api/users/2
+
+#Get List of Users:
+===================================
+void GetUsersList() 
+	{
+	//GET request dont have Given method	
+	//given()
+	
+	 when()
+	    .get("https://reqres.in/api/users/2")
+	
+	.then()
+	    .statusCode(200)
+	    .body("page",equalTo(2))
+	    .log().all();
+    }
+
+
+POST
+https://reqres.in/api/users
+{
+    "name": "morpheus",
+    "job": "leader"
+}
+
+void createUser(){
+    Hashmap hm=new Hashmap()
+	hm.body("name","nikhitha")
+	hm.body("job","QA")
+	
+	given()
+	  .contentType("application/json")
+	  .body(data)
+	  
+when()
+    POST("https://reqres.in/api/users")
+then
+     .statusCode(201)
+	 .log().All();
+
+PUT (update user):
+https://reqres.in/api/users/2
+{
+    "name": "morpheus",
+    "job": "zion resident"
+}
+
+DELETE
+https://reqres.in/api/users/2
+
+

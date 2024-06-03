@@ -1,0 +1,93 @@
+#day-6 #restAPI
+
+API CHAINING
+----------------
+To create sequence of API Calls where output of one request is used as input for next
+
+Reference used:
+https://gorest.co.in/
+
+POST Request
+======================
+
+Step-1
+-----------------------
+Authentication at Collection Level and Inherit from parent at Request Level
+
+Step-2
+--------------------
+creating radom name and email id  by using below function
+
+var random=Math.radom().toString(32).subString(2)
+
+Store this random email and name in env varaibles via script in pre-request tab
+
+var useremail="jim"+random+"@gmail.com";
+var username="jim"+random;
+
+pm.environment.set("user_email",useremail);
+pm.environment.set("user_name",username);
+
+Step-3
+----------------------
+use this varaibles in requestBody using {{variablename}}
+
+Step-4
+------------------------
+Here comes first chaining process 
+-> store the id generated automactically into env varaibles
+
+GET Request
+====================
+Step-1
+------------------------
+Use the above id from env varaibles via variable name in GET URL using {{}}}
+
+Step-2
+-------------
+u should able to see response 
+
+Step-3
+-------------
+now compare repsonse data with store values in env varaibles
+pm.test("status code",()=> {
+    pm.response.to.have.status(200);
+});
+
+var jsonData = pm.response.json();
+pm.test("comparing name and email",()=> {
+    console.log(pm.environment.get("user_id"));
+    pm.expect(jsonData.id).to.eql(pm.environment.get("user_id"));
+    pm.expect(jsonData.name).to.eql(pm.environment.get("user_name"));
+    pm.expect(jsonData.email).to.eql(pm.environment.get("user_email"));
+});
+
+DELETE Request
+===============================
+Step-1
+------------------------
+Use the above id from env varaibles via variable name in GET URL using {{}}}
+
+Step-2
+-------------
+u should not retrive the repsonse as it deleted
+
+Step-3
+-------------
+now compare repsonse data with store values in env varaibles
+pm.test("status code",()=> {
+    pm.response.to.have.status(204);
+});
+
+u can now unset the env variables 
+pm.environment.unset("user_email");
+pm.environment.unset("user_name");
+pm.environment.unset("user_id");
+
+
+
+
+
+
+
+

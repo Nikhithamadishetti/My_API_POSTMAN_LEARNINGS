@@ -1,0 +1,149 @@
+day-4 #restAPI
+
+Response Validations
+============================
+StatusCode
+ResponseData
+ResponseTime
+Cookies
+Headers
+
+Assertions validation 
+===========-==========
+pm -> library 
+functions are wrriten in JavaScript
+
+inside javascript userdefined function we write pm functions
+
+Normal Functiom
+Arrow Function(popular)
+
+Simple Exmples:
+==============================
+Validating StatusCode:
+-----------------------
+pm.test("Status Code is 200",()=>{
+pm.response.to.have.status(200);
+});
+
+pm.test("Successful post request",()=>{
+pm.expect(pm.response.code).to.be.oneof([201,202]);
+});
+
+pm.test("Check statusCode text",()=>
+{
+pm.response.to.have.status("created");
+});
+
+Validating Headers:
+-----------------------------
+pm.test("Check contentType in header",()=>{
+pm.expect(pm.response.headers.get("Content-Type")).to.equals("application/json");
+});
+
+Validating Cookies:
+-----------------------
+pm.test("Check cookies",()=>{
+pm.expect(pm.response.cookies.get("language")).to.equals("en-gb");
+});
+
+validating Responsetime:
+--------------------
+pm.test("response time",()=>{
+    pm.expect(pm.response.responseTime).to.have.below(200);
+});
+
+response Body
+--------------
+json path play crucial role here
+
+const jsonData=pm.response.json();
+
+pm.test("validating response data",()=>
+{
+pm.expect(jsonData).to.be.an("object");
+pm.expect(jsonData.data.id).to.be.a("number");
+});
+
+pm.test("object contains an array",()=>{
+pm.expect(jsonData.courses).to.includes("java");
+pm.expect(jsonData.courses).to.have.members(["java","selenium"]);
+});
+
+
+JSON Schema Verification
+===============================
+JSON Schema:
+
+what is json Schema?
+it describing the type of data used in json file
+Schema used to manage Json Data
+
+//json schema Validation
+
+Use online json schema converter to generate Schema
+=========================================================
+var schema={
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "email": {
+          "type": "string"
+        },
+        "first_name": {
+          "type": "string"
+        },
+        "last_name": {
+          "type": "string"
+        },
+        "avatar": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "email",
+        "first_name",
+        "last_name",
+        "avatar"
+      ]
+    },
+    "support": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "url",
+        "text"
+      ]
+    }
+  },
+  "required": [
+    "data",
+    "support"
+  ]
+}
+
+pm.test("Json schema Validation",()=>{
+    pm.expect(tv4.validate(jsonData,schema)).to.be.true;
+});
+
+
+
+
+
+
+
+
